@@ -12,11 +12,11 @@ app = Flask(__name__)
 
 def gerar_grafico():
     conn = psycopg2.connect( 
-        host="ep-red-glitter-adx9s4na-pooler.c-2.us-east-1.aws.neon.tech",
-        dbname="neondb",
-        user="neondb_owner",
-        password="npg_8jbKOq2MDZvT",
-        sslmode="require"
+            host="ep-lucky-smoke-adwd795c-pooler.c-2.us-east-1.aws.neon.tech",
+            dbname="neondb",
+            user="neondb_owner",
+            password="npg_mxW9Lp0gcGJD",
+            sslmode="require"
     )
     cursor = conn.cursor()
     cursor.execute('SELECT DEVICE FROM access;')
@@ -45,11 +45,11 @@ def gerar_grafico():
 
 def gerar_mapa():
     conn = psycopg2.connect(
-        host="ep-red-glitter-adx9s4na-pooler.c-2.us-east-1.aws.neon.tech",
-        dbname="neondb",
-        user="neondb_owner",
-        password="npg_8jbKOq2MDZvT",
-        sslmode="require"
+            host="ep-lucky-smoke-adwd795c-pooler.c-2.us-east-1.aws.neon.tech",
+            dbname="neondb",
+            user="neondb_owner",
+            password="npg_mxW9Lp0gcGJD",
+            sslmode="require"
     )
     cursor = conn.cursor()
     cursor.execute("""
@@ -105,3 +105,4 @@ if __name__ == "__main__":
     # roda o gráfico em uma thread separada
     threading.Thread(target=gerar_grafico).start()
     app.run(debug=True)
+
